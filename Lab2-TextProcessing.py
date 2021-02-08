@@ -1,11 +1,8 @@
 # Pack
-# from nltk.tokenize import regexp_tokenize
-import nltk
-from nltk import regexp_tokenize
 
+import nltk
 nltk.download('punkt')
-import pickle
-from collections import Counter
+
 
 # Read text file
 
@@ -46,7 +43,7 @@ len(least_freq)
 # Tokenisation
 # Using a regex based tokenizer in NLTK, other tokenizers required more support.
 
-tokens = nltk.word_tokenize(text, pattern='\s+', gaps=True)
+tokens = nltk.regexp_tokenize(text, pattern='\s+', gaps=True)
 
 print(tokens)
 
